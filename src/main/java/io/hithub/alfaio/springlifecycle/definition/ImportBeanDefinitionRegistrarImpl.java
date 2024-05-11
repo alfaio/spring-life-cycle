@@ -17,6 +17,7 @@ public class ImportBeanDefinitionRegistrarImpl implements ImportBeanDefinitionRe
 
     @Override
     public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
+        System.out.println(" ===>>> BeanFactory.1 ImportBeanDefinitionRegistrar: registerBeanDefinitions");
         Map<String, Object> attributes = importingClassMetadata.getAnnotationAttributes(EnableConfig.class.getName());
         // 可以通过注解传递参数，如指定bean名字
         String beanName = attributes.get("defaultName").toString();

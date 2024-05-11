@@ -19,14 +19,14 @@ public class BeanFactoryPostProcessorImpl implements BeanDefinitionRegistryPostP
     @Override
     public void postProcessBeanDefinitionRegistry(BeanDefinitionRegistry registry) throws BeansException {
         // 用于新增 BeanDefinition
-        System.out.println(" ===>>> BeanFactory.1 BeanDefinitionRegistryPostProcessor: postProcessBeanDefinitionRegistry");
+        System.out.println(" ===>>> BeanFactory.2 BeanDefinitionRegistryPostProcessor: postProcessBeanDefinitionRegistry");
         BeanDefinitionBuilder builder = BeanDefinitionBuilder.genericBeanDefinition(BeanFromRegistry.class);
         registry.registerBeanDefinition("BeanFromRegistry", builder.getBeanDefinition());
     }
 
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-        System.out.println(" ===>>> BeanFactory.2 BeanFactoryPostProcessor: postProcessBeanFactory");
+        System.out.println(" ===>>> BeanFactory.3 BeanFactoryPostProcessor: postProcessBeanFactory");
         // 用于修改 BeanDefinition,
         // 1、a. bean的个数。
         int count = beanFactory.getBeanDefinitionCount();
