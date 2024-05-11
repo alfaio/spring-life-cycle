@@ -1,4 +1,4 @@
-package io.hithub.alfaio.springlifecycle;
+package io.hithub.alfaio.springlifecycle.bean;
 
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.BeansException;

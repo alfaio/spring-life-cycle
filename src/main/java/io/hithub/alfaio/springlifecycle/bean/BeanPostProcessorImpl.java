@@ -1,4 +1,4 @@
-package io.hithub.alfaio.springlifecycle;
+package io.hithub.alfaio.springlifecycle.bean;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.PropertyValues;
@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  * @since 2024/5/10
  **/
 @Component
-public class SpringLifeCycle implements InstantiationAwareBeanPostProcessor, BeanPostProcessor {
+public class BeanPostProcessorImpl implements InstantiationAwareBeanPostProcessor, BeanPostProcessor {
     
     @Override
     public Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException {
