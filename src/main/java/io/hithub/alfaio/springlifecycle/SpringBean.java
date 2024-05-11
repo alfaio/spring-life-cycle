@@ -28,24 +28,24 @@ public class SpringBean implements InitializingBean, DisposableBean
     ApplicationContext applicationContext;
 
     public SpringBean() {
-        System.out.println(" ===>>> S.2 SpringBean: construct");
+        System.out.println(" ===>>> SELF.2 SpringBean: construct");
     }
 
     // 不知道为什么没有调用
     public void setOtherBean(OtherBean otherBean) {
-        System.out.println(" ===>>> S.？ SpringBean: setOtherBean");
+        System.out.println(" ===>>> SELF.？ SpringBean: setOtherBean");
         this.otherBean = otherBean;
     }
 
 
     @Override
     public void setBeanName(String name) {
-        System.out.println(" ===>>> S.5 BeanNameAware: setBeanName");
+        System.out.println(" ===>>> SELF.5 BeanNameAware: setBeanName");
     }
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        System.out.println(" ===>>> S.6 ApplicationContextAware: setApplicationContext");
+        System.out.println(" ===>>> SELF.6 ApplicationContextAware: setApplicationContext");
         this.applicationContext = applicationContext;
     }
 
@@ -56,25 +56,25 @@ public class SpringBean implements InitializingBean, DisposableBean
      */
     @PostConstruct
     public void postConstruct() {
-        System.out.println(" ===>>> S.8 PostConstruct: postConstruct");
+        System.out.println(" ===>>> SELF.8 PostConstruct: postConstruct");
 
     }
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println(" ===>>> S.9 InitializingBean: afterPropertiesSet");
+        System.out.println(" ===>>> SELF.9 InitializingBean: afterPropertiesSet");
     }
 
     public void initMethod() {
-        System.out.println(" ===>>> S.10 @Bean: initMethod");
+        System.out.println(" ===>>> SELF.10 @Bean: initMethod");
     }
 
     @Override
     public void destroy() throws Exception {
-        System.out.println(" ===>>> S.12 DisposableBean: destroy");
+        System.out.println(" ===>>> SELF.12 DisposableBean: destroy");
     }
 
     public void destroyMethod() {
-        System.out.println(" ===>>> S.13 @Bean: destroyMethod");
+        System.out.println(" ===>>> SELF.13 @Bean: destroyMethod");
     }
 }

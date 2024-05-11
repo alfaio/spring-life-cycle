@@ -325,4 +325,4 @@ Spring Bean的生命周期分为四个阶段和多个扩展点。扩展点又可
    - DisposableBean
 # 代码运行结果
 
-![img_1.png](codeResult.png)
+![img.png](result.png)

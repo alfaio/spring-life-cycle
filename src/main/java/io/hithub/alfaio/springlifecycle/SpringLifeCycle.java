@@ -16,7 +16,7 @@ public class SpringLifeCycle implements InstantiationAwareBeanPostProcessor, Bea
     @Override
     public Object postProcessBeforeInstantiation(Class<?> beanClass, String beanName) throws BeansException {
         if (beanName.contains("springBean")) {
-            System.out.println(" ===>>> A.1 InstantiationAwareBeanPostProcessor: postProcessBeforeInstantiation");
+            System.out.println(" ===>>> ALL.1 InstantiationAwareBeanPostProcessor: postProcessBeforeInstantiation");
         }
         return InstantiationAwareBeanPostProcessor.super.postProcessBeforeInstantiation(beanClass, beanName);
     }
@@ -24,7 +24,7 @@ public class SpringLifeCycle implements InstantiationAwareBeanPostProcessor, Bea
     @Override
     public boolean postProcessAfterInstantiation(Object bean, String beanName) throws BeansException {
         if (beanName.contains("springBean")) {
-            System.out.println(" ===>>> A.3 InstantiationAwareBeanPostProcessor: postProcessAfterInstantiation");
+            System.out.println(" ===>>> ALL.3 InstantiationAwareBeanPostProcessor: postProcessAfterInstantiation");
         }
         return InstantiationAwareBeanPostProcessor.super.postProcessAfterInstantiation(bean, beanName);
     }
@@ -32,7 +32,7 @@ public class SpringLifeCycle implements InstantiationAwareBeanPostProcessor, Bea
     @Override
     public PropertyValues postProcessProperties(PropertyValues pvs, Object bean, String beanName) throws BeansException {
         if (beanName.contains("springBean")) {
-            System.out.println(" ===>>> A.4 InstantiationAwareBeanPostProcessor: postProcessProperties");
+            System.out.println(" ===>>> ALL.4 InstantiationAwareBeanPostProcessor: postProcessProperties");
         }
         return InstantiationAwareBeanPostProcessor.super.postProcessProperties(pvs, bean, beanName);
     }
@@ -40,7 +40,7 @@ public class SpringLifeCycle implements InstantiationAwareBeanPostProcessor, Bea
     @Override
     public Object postProcessBeforeInitialization(Object bean, String beanName) throws BeansException {
         if (beanName.contains("springBean")) {
-            System.out.println(" ===>>> A.7 BeanPostProcessor: postProcessBeforeInitialization");
+            System.out.println(" ===>>> ALL.7 BeanPostProcessor: postProcessBeforeInitialization");
         }
         return InstantiationAwareBeanPostProcessor.super.postProcessBeforeInitialization(bean, beanName);
     }
@@ -48,7 +48,7 @@ public class SpringLifeCycle implements InstantiationAwareBeanPostProcessor, Bea
     @Override
     public Object postProcessAfterInitialization(Object bean, String beanName) throws BeansException {
         if (beanName.contains("springBean")) {
-            System.out.println(" ===>>> A.11 BeanPostProcessor: postProcessAfterInitialization");
+            System.out.println(" ===>>> ALL.11 BeanPostProcessor: postProcessAfterInitialization");
         }
         return InstantiationAwareBeanPostProcessor.super.postProcessAfterInitialization(bean, beanName);
     }
