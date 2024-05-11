@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: spring-life-cycle
+test:
+  spring:
+    Value: dev001
